@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import Header from '../Header';
 import axios from 'axios';
+import {Link} from 'react-router-dom';
 
 function Form(){
     const [estados,setEstados] = useState([]);
@@ -52,6 +53,8 @@ function Form(){
                         <label>UF:
                             <select name="cmbUF" id="cmbUF" >
                                 <option value="0" onChange={handleInputChange}>Selecione uma opção</option>
+                                <option value="sc" onChange={handleInputChange}>Santa Catarina</option>
+                                <option value="rs" onChange={handleInputChange}>Rio Grande do Sul</option>
                                 {estados.map(estado => (<option key={estado.id} value = {estado.id}>{estado.uf}</option>))}
                             </select>
                         </label>
@@ -59,6 +62,9 @@ function Form(){
                     <input type="submit" value="Salvar" />
                 </fieldset>
             </form>
+            <p>
+                <Link to="./">Acessar Home</Link>
+            </p>
         </div>
     )
 }

@@ -19,7 +19,7 @@ function Home(){
       <p>{contador} Cliques!</p>
       
       <p>
-        <Link to="/cadastro">Acessar Cadsatro</Link>
+        <Link to="/cadastro">Acessar Cadastro</Link>
       </p>
     </div>
   );
